@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Donald Duck</title>
+  <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    font-family: 'Lobster', cursive;
+  } 
+
+ .header {
+    width: auto;
+    height: 70px;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    background-color: #607D8B;
+    font-family: 'Lobster', cursive;
+}
+
+  .main {
+    width: auto;
+    height: 537px;
+  }
+
+  .example {
+    width: 360px;
+    height: 200px;
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    background-color: #90A4AE;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 190px;
+    cursor: pointer;
+  }
+
+  .puzzle-image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .table {
+    border-collapse: collapse;
+    position: absolute;
+    top: 83px;
+    left: 414px;
+  }
+
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+
+  .saturate {
+    filter: saturate(1);
+  }
+
+  .puzzle {
+    width: 100px;
+    height: 100px;
+    border: 0px solid #607D8B;  
+  }
+
+  .footer {
+    width: auto;
+    height: 55px;
+    font-size: 27px;
+    color: white;
+    background-color: #607D8B;
+    text-align: center;
+    line-height: 2;
+  }
+
+  .footer-frase {
+    width: 470px;
+    height: 55px;
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    line-height: 2;
+    /*background-color: red;*/
+    position: absolute;
+    left: 34%;
+  }
+
+  .puzzle-img {
+    width: 360px;
+    height: 200px;
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    background-image: url(./img/mini-DuckTales.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }  
+
+
+   </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="header">Собери пазл "Утиные итории"</div>
+    <div class="main">
+    <div class="example">Показать образец</div>
+      <table class="table">
+        <tr>
+          <td class="puzzle"><img src="./img/dt_01.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="0"></td>
+          <td class="puzzle"><img src="./img/dt_02.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="1"></td>
+          <td class="puzzle"><img src="./img/dt_03.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="2"></td>
+          <td class="puzzle"><img src="./img/dt_04.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="3"></td>
+          <td class="puzzle"><img src="./img/dt_05.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="4"></td>
+          <td class="puzzle"><img src="./img/dt_06.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="5"></td>
+          <td class="puzzle"><img src="./img/dt_07.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="6"></td>
+          <td class="puzzle"><img src="./img/dt_08.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="7"></td>
+          <td class="puzzle"><img src="./img/dt_09.png" class="puzzle-image" data-element-row-index="0" data-element-col-index="8"></td>
+        </tr>
+        <tr>
+          <td class="puzzle"><img src="./img/dt_10.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="0"></td>
+          <td class="puzzle"><img src="./img/dt_11.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="1"></td>
+          <td class="puzzle"><img src="./img/dt_12.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="2"></td>
+          <td class="puzzle"><img src="./img/dt_13.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="3"></td>
+          <td class="puzzle"><img src="./img/dt_14.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="4"></td>
+          <td class="puzzle"><img src="./img/dt_15.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="5"></td>
+          <td class="puzzle"><img src="./img/dt_16.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="6"></td>
+          <td class="puzzle"><img src="./img/dt_17.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="7"></td>
+          <td class="puzzle"><img src="./img/dt_18.png" class="puzzle-image" data-element-row-index="1" data-element-col-index="8"></td>
+        </tr>
+        <tr>
+          <td class="puzzle"><img src="./img/dt_19.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="0"></td>
+          <td class="puzzle"><img src="./img/dt_20.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="1"></td>
+          <td class="puzzle"><img src="./img/dt_21.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="2"></td>
+          <td class="puzzle"><img src="./img/dt_22.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="3"></td>
+          <td class="puzzle"><img src="./img/dt_23.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="4"></td>
+          <td class="puzzle"><img src="./img/dt_24.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="5"></td>
+          <td class="puzzle"><img src="./img/dt_25.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="6"></td>
+          <td class="puzzle"><img src="./img/dt_26.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="7"></td>
+          <td class="puzzle"><img src="./img/dt_27.png" class="puzzle-image" data-element-row-index="2" data-element-col-index="8"></td>
+        </tr>
+        <tr>
+          <td class="puzzle"><img src="./img/dt_28.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="0"></td>
+          <td class="puzzle"><img src="./img/dt_29.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="1"></td>
+          <td class="puzzle"><img src="./img/dt_30.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="2"></td>
+          <td class="puzzle"><img src="./img/dt_31.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="3"></td>
+          <td class="puzzle"><img src="./img/dt_32.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="4"></td>
+          <td class="puzzle"><img src="./img/dt_33.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="5"></td>
+          <td class="puzzle"><img src="./img/dt_34.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="6"></td>
+          <td class="puzzle"><img src="./img/dt_35.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="7"></td>
+          <td class="puzzle"><img src="./img/dt_36.png" class="puzzle-image" data-element-row-index="3" data-element-col-index="8"></td>
+        </tr>
+        <tr>
+          <td class="puzzle"><img src="./img/dt_37.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="0"></td>
+          <td class="puzzle"><img src="./img/dt_38.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="1"></td>
+          <td class="puzzle"><img src="./img/dt_39.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="2"></td>
+          <td class="puzzle"><img src="./img/dt_40.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="3"></td>
+          <td class="puzzle"><img src="./img/dt_41.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="4"></td>
+          <td class="puzzle"><img src="./img/dt_42.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="5"></td>
+          <td class="puzzle"><img src="./img/dt_43.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="6"></td>
+          <td class="puzzle"><img src="./img/dt_44.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="7"></td>
+          <td class="puzzle"><img src="./img/dt_45.png" class="puzzle-image" data-element-row-index="4" data-element-col-index="8"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer"><div class="footer-frase">У тебя получится!</div></div>
+  </body>
+  </html>
+
+  <script type="text/javascript">
+
+var listRowListPuzzle = [
+    [
+      {
+        "img-src": "./img/dt_01.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_02.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_03.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_04.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_05.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_06.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_07.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_08.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_09.png",
+        "rotate": 0,
+      }
+    ],
+    [
+      {
+        "img-src": "./img/dt_10.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_11.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_12.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_13.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_14.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_15.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_16.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_17.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_18.png",
+        "rotate": 0,
+      }
+    ],
+    [
+      {
+        "img-src": "./img/dt_19.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_20.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_21.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_22.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_23.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_24.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_25.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_26.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_27.png",
+        "rotate": 0,
+      }
+    ],
+    [
+      {
+        "img-src": "./img/dt_28.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_29.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_30.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_31.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_32.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_33.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_34.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_35.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_36.png",
+        "rotate": 0,
+      }
+    ],
+    [
+      {
+        "img-src": "./img/dt_37.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_38.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_39.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_40.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_41.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_42.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_43.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_44.png",
+        "rotate": 0,
+      },
+      {
+        "img-src": "./img/dt_45.png",
+        "rotate": 0,
+      }
+    ],
+  ]
+
+  var listElementRow = document.querySelectorAll("table tr");
+  var frase = document.querySelector(".footer-frase");
+
+  var listRowListElementPuzzle = [];
+  for (var i = 0; i < listElementRow.length; i++) {
+    listRowListElementPuzzle[i] = listElementRow[i].querySelectorAll(":scope .puzzle");
+  }
+  var listRowListElementPuzzleImg = [];
+  for (var i = 0; i < listElementRow.length; i++) {
+    listRowListElementPuzzleImg[i] = listElementRow[i].querySelectorAll(":scope .puzzle-image")
+  }
+
+  shufflePuzzle();
+
+  function redrawPuzzle (rowIndex, colIndex) {
+    var puzzle = listRowListPuzzle[rowIndex][colIndex];
+    var elementPuzzleImg = listRowListElementPuzzleImg[rowIndex][colIndex];
+    elementPuzzleImg.classList.remove("rotate-0");
+    elementPuzzleImg.classList.remove("rotate-90");
+    elementPuzzleImg.classList.remove("rotate-180");
+    elementPuzzleImg.classList.remove("rotate-270");
+    elementPuzzleImg.classList.add("rotate-"+puzzle["rotate"]);
+    elementPuzzleImg.src = puzzle["img-src"]
+  }
+
+  for (var i = 0; i < listRowListElementPuzzleImg.length; i++) {
+    for (var j = 0; j < listRowListElementPuzzleImg[i].length; j++) {
+    listRowListElementPuzzleImg[i][j].onclick = onclickPuzzleImg;
+  }
+} 
+
+function onclickPuzzleImg(event) {
+  var currentRowIndex = event.currentTarget.dataset["elementRowIndex"];
+  var currentColIndex = event.currentTarget.dataset["elementColIndex"];
+  var puzzle = listRowListPuzzle[currentRowIndex][currentColIndex];
+  puzzle["rotate"]+=90;
+    if (puzzle["rotate"] == 360) {
+      puzzle["rotate"] = 0;
+    }
+  redrawPuzzle(currentRowIndex, currentColIndex);
+  checkPuzzle();
+}
+
+function shufflePuzzle () {
+  for (var i = 0; i < listRowListPuzzle.length; i++) {
+      for (var j = 0; j < listRowListPuzzle[i].length; j++) {
+      listRowListPuzzle[i][j].rotate = getRandomRotate();
+      redrawPuzzle(i, j);
+    }
+  } 
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomRotate() {
+  var listRandomRotate = [0, 90, 180, 270];
+  var randomIndex = getRandomInt(1, 3);
+  return listRandomRotate[randomIndex];
+}
+
+function getIsWin () {
+  for (var i = 0; i < listRowListPuzzle.length; i++) {
+      for (var j = 0; j < listRowListPuzzle[i].length; j++) {
+      if (listRowListPuzzle[i][j].rotate !== 0) {
+        return false;
+      }
+    }
+  } 
+  return true;
+} 
+
+function checkPuzzle() {
+  var isWin = getIsWin();
+  redrawIsWin(isWin);
+}
+
+function redrawIsWin(isWin) {
+  for (var i = 0; i < listRowListElementPuzzleImg.length; i++) {
+    for (var j = 0; j < listRowListElementPuzzleImg[i].length; j++) {
+      var elementPuzzleImg = listRowListElementPuzzleImg[i][j];
+      if (isWin) {
+        elementPuzzleImg.classList.add("saturate")
+      }
+      else {
+        elementPuzzleImg.classList.remove("saturate")
+      }
+    }
+}
+  if (isWin) {
+    frase.innerText = frase.innerText.replace("У тебя получится!", "Молодец!")
+  }
+  else {
+    frase.innerText = frase.innerText.replace("Молодец!", "У тебя получится!")
+  }
+}
+
+var elementExample = document.querySelector('.example');
+elementExample.onclick = function () {
+if (event.currentTarget.classList.value.indexOf("example") !== -1) {
+    elementExample.classList.remove('example');
+    elementExample.classList.add('puzzle-img');
+    return;
+    };
+if (event.currentTarget.classList.value.indexOf("puzzle-img") !== -1) {
+    event.currentTarget.classList.remove('puzzle-img');
+    event.currentTarget.classList.add('example');
+    return;
+    };
+};
+
+  </script>
