@@ -1,1 +1,1 @@
-gm-02-donald-duck-puzzle
+https://rawgit.com/lairiel/gm-02-donald-duck-puzzle/master/index.html
